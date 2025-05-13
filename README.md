@@ -1,4 +1,4 @@
-# Canadian Western Bank – SQL Code Challenge (2023)
+# Canadian Western Bank – Data Modeling and SQL Code Challenge (2023)
 
 This repository contains my solution to a SQL-based technical coding challenge completed during the interview process for a contract role at **Canadian Western Bank**. The challenge evaluated data modeling, SQL scripting, and business intelligence reporting based on a fictional retail scenario.
 
