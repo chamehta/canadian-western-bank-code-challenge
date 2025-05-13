@@ -11,27 +11,46 @@ The assignment required:
 - Writing a **single SQL script** to generate:
   - Machine Learning training data
   - Year-to-date (YTD) sales performance report
+
+---
+
+### ✅ Challenge Objectives
+
+1. **Design a Star Schema**
+   - Defined dimension and fact tables to model sales order and product relationships.
+   - Created DDL for `DimProduct`, `DimOrder`, `DimTerritory`, `DimSalesEmployee`, `FactOrderDetail`, and `FactSales`.
+
+2. **Stored Procedures**
+   - `GetDataForMlAlgorithm`: Joins multiple dimensions with fact data for ML-ready format.
+   - `GetDataForManagementReport`: Dynamically filters salespeople by name and territory using dynamic SQL.
+
+3. **Bonus Insights**
+   - Calculated `PercentOfTotal` sales contribution.
+   - Ranked salespeople using `DENSE_RANK()` based on `SalesYTD`.
+
+---
+
 ## 📁 Repository Structure
 
-
-```text canadian-western-bank-code-challenge/
+```text
+canadian-western-bank-code-challenge/
 │
-├── return/                         # Final deliverables
-│   ├── report.sql                  # Full SQL script for challenge solution
+├── return/                             # Final deliverables
+│   ├── report.sql                      # Full SQL script for challenge solution
 │   └── star-schema-cwb-code-challenge.pdf  # Star schema diagram (Lucidchart)
 │
-├── docs/                           # Supporting documentation
+├── docs/                               # Supporting documentation
 │   ├── coding-assignment-revised.pdf       # Case study instructions
 │   └── megacorp-operational-data-model.pdf # Operational ERD (provided)
 │
-└── README.md                       # Project description and context
+└── README.md                           # Project description and context
 ```
 ## 🧠 Technical Highlights
 
 - 📐 **Star Schema Design**: Modeled for both analytical and machine learning consumption.
-- 🧾 **SQL Logic**: Delivered two business reports in one file using **parameterized queries**, **window functions**, and **CTEs**.
+- 🧾 **SQL Logic**: Delivered two business reports in one file using dynamic SQL, window functions, and modular SQL.
 - ⚙️ **Optimized Workflow**: Avoided cursors; implemented ranking logic and dynamic percent-of-total metrics.
-- 🔐 **Data Compliance**: Assumed realistic production-grade practices like RBAC and scalability.
+- 🔐 **Data Compliance**: Followed realistic production-grade practices such as RBAC and scalability considerations.
 
 ---
 
@@ -39,13 +58,13 @@ The assignment required:
 
 - SQL (ANSI standard, SQL Server-compatible)
 - Lucidchart (for data modeling)
-- Microsoft Word & PDF (for challenge documentation)
+- Microsoft Word & PDF (for documentation)
 
 ---
 
 ## 🔍 Disclaimer
 
-This solution was developed for interview evaluation purposes only. All data and business scenarios are fictional and non-confidential. This repository is not affiliated with Canadian Western Bank or any official entity.
+This solution was developed for interview evaluation purposes only. All data and business scenarios are fictional and non-confidential. This repository is not affiliated with Canadian Western Bank or any of its official entities.
 
 ---
 
